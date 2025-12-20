@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "odoo-ai-agent"
+version = "0.1.0"
+description = "AI Agent on top of Odoo ERP"
+authors = ["Jinesh Prajapat <prajapatjinesh585@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.124.4"
+uvicorn = "^0.38.0"
+sqlalchemy = "^2.0.45"
+psycopg2-binary = "^2.9.11"
+alembic = "^1.17.2"
+pydantic = {extras = ["email"], version = "^2.12.5"}
+python-dotenv = "^1.2.1"
+requests = "^2.32.5"
+openai = "^2.13.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = "^3.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
