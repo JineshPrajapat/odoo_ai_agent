@@ -5,11 +5,13 @@ from app.workflow.clarification import generate_clarification
 from app.odoo.registry.registry_slice import build_llm_registry_slice
 from app.odoo.service import OdooService
 from app.agents.response_agent import ResponseAgent
+from app.agents.model_resolver_agent import ModelResolverAgent
 
 class WorkflowEngine:
     def run(self, *, user_input: str, odoo_uid: int):
         try:
-            models = ModelResolver().resolve(user_input)
+            # models = ModelResolver().resolve(user_input)
+            models = ModelResolverAgent().discover(user_input=user_input)
 
             if not models:
                 return generate_clarification("Which Odoo entity are you referring to?")

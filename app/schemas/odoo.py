@@ -11,4 +11,5 @@ class OdooExecuteRequest(BaseModel):
     ids: Optional[List[int]] = None
 
 class OdooModuleInstallPayload(BaseModel):
+    action: str
     module_name: str

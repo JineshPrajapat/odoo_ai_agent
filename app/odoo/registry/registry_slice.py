@@ -29,7 +29,8 @@ def build_llm_registry_slice(
             "required_fields_on_create": meta.get(
                 "required_fields_on_create", []
             ),
-            "fields": _compress_fields(meta.get("fields", {})),
+            "fields": meta.get("fields")
+            # "fields": _compress_fields(meta.get("fields", {})),
         }
 
         if include_relations:

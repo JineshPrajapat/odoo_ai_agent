@@ -19,18 +19,18 @@ class PlannerAgent:
         return f"""
                 You are an Odoo ERP action planner.
 
-                User request:
-                {user_input}
-
                 Available Odoo models and fields (STRICT):
                 {registry_slice}
 
+                User request:
+                {user_input}
+
                 Rules:
-                - You MUST select a model from the registry
-                - You MUST use ONLY fields present in the registry
+                - You may return ONE or MULTIPLE steps
+                - Each step must have a unique id
+                - Steps may reference previous results using $step_id.field
+                - Use ONLY provided models and fields
                 - Do NOT invent fields or models
-                - Choose ONE action only:
-                read | create | update | delete | install_module | clarify
                 - If required data is missing, return action=clarify
                 - Output MUST be valid JSON only
                 - Do NOT include explanations

@@ -6,7 +6,7 @@ from app.odoo.auth import OdooAuthService
 router = APIRouter(prefix="/odoo", tags=["Odoo"])
 
 @router.post("/execute")
-def execute_odoo_action(payload: OdooExecuteRequest):
+def execute_odoo_action(payload: OdooExecuteRequest | OdooModuleInstallPayload):
     try:
         # Step 1: Authenticate to Odoo and get uid
         uid = OdooAuthService().authenticate()

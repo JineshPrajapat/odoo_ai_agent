@@ -22,7 +22,21 @@ class OdooService:
 
     def execute(self, plan: dict):
         action = plan["action"]
+
+        # Non-CRUD actions FIRST
+        if action == "install_module":
+            module_name = plan["module_name"]
+            if not module_name:
+                raise ValueError("module_name is required for install_module")
+            return {
+                "message": f"Module '{module_name}' installed successfully",
+                "data": self.install_module(module_name)
+            }
+        
         model = plan["model"]
+
+        if not model:
+            raise ValueError(f"Model is required for action '{action}'")
 
         if action == "read":
             data = self.crud.read(
@@ -89,7 +103,7 @@ class OdooService:
             args=[module_ids]
         )
 
-        return True
+        return module_ids
 
     def list_installed_modules(self):
         """
