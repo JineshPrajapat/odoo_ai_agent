@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1 import chat, health, auth, odoo, agent_test
 
@@ -8,6 +9,14 @@ from app.exceptions.app_exceptions import AppException, generic_exception_handle
 from app.odoo.registry.registry_builder import build_registry
 
 app = FastAPI(title="Odoo AI Agent MVP")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # app.add_middleware(AuthMiddleware)
 app.add_exception_handler(AppException, app_exception_handler)

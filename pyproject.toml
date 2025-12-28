@@ -19,6 +19,7 @@ requests = "^2.32.5"
 openai = "^2.13.0"
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 python-jose = "^3.5.0"
+orjson = "^3.11.5"
 
 
 [build-system]

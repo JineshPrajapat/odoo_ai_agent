@@ -1,20 +1,28 @@
 import requests
 from app.core.config import ODOO_URL, ODOO_DB, ODOO_PASSWORD
 import uuid
-
+from app.odoo.errors import OdooExecutionError
 
 class OdooRequest:
     def __init__(self):
         self.url = f"{ODOO_URL}/jsonrpc"
 
     def _raw_call(self, payload: dict):
-        r = requests.post(self.url, json=payload, timeout=15)
-        r.raise_for_status()
+        try:
+            r = requests.post(self.url, json=payload, timeout=15)
+            r.raise_for_status()
 
-        response = r.json()
+            response = r.json()
+            
+        except requests.exceptions.RequestException as e:
+            raise OdooExecutionError(
+                message="Unable to connect to Odoo server",
+                source="network"
+            )
+            
         if "error" in response:
             raise RuntimeError(response["error"])
-
+        
         return response.get("result")
 
     def call(self, db, uid, password, model, method, args=None, kwargs=None):

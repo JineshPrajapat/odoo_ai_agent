@@ -9,26 +9,18 @@ class ModelResolverAgent:
     def discover(self, user_input: str) -> list[str]:
         model_index = self._build_model_index()
 
-        prompt = f"""
-                    You are an Odoo ERP model discovery engine.
-
-                    User request:
-                    {user_input}
-
-                    Available Odoo entities:
-                    {model_index}
+        system_prompt = "You are an Odoo ERP model discovery engine. Always respond in valid JSON."
+        user_prompt = f"""
+                    User request: {user_input}
+                    Available Odoo entities: {model_index}
 
                     Rules:
-                    - Select ALL relevant models
-                    - Use only models from the list
-                    - Output JSON only
-                    - No explanations
-
-                    JSON format:
-                    {{ "models": [] }}
+                    - Select all relevant models from the list.
+                    - Output JSON only: {{ "models": [] }}.
+                    - Do not add explanations.
                 """
 
-        response = self.llm_client.complete(prompt)
+        response = self.llm_client.complete(system_prompt, user_prompt)
         models = response.get("models", [])
 
         return models
@@ -46,3 +38,20 @@ class ModelResolverAgent:
             }
 
         return index
+
+    def resolve_models(self, user_input: str) -> list[str]:
+        mapping = {
+            "customer": "res.partner",
+            "product": "product.template",
+            "product category": "product.category",
+            "invoice": "account.move",
+            "order": "sale.order",
+            "module": "ir.module.module",
+            "sale order line":"sale.order.line",
+        }
+
+        for keyword, model in mapping.items():
+            if keyword in user_input.lower():
+                return [model]
+
+        return []

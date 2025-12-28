@@ -29,8 +29,8 @@ def build_llm_registry_slice(
             "required_fields_on_create": meta.get(
                 "required_fields_on_create", []
             ),
-            "fields": meta.get("fields")
-            # "fields": _compress_fields(meta.get("fields", {})),
+            # "fields": meta.get("fields")
+            "fields": _compress_fields(meta.get("fields", {})),
         }
 
         if include_relations:
@@ -41,13 +41,13 @@ def build_llm_registry_slice(
     return slice_registry
 
 
-def _compress_fields(fields: dict) -> dict:
+def _compress_fields(fields: dict) -> list[str]:
     """
     Reduce field metadata for LLM consumption.
+    Return only editable field names.
     """
-    compressed = {}
-    for name, info in fields.items():
-        if info.get("readonly"):
-            continue
-        compressed[name] = info["type"]
-    return compressed
+    return [
+        {name : info["type"]}
+        for name, info in fields.items()
+        if not info.get("readonly", False)
+    ]

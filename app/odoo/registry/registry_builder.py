@@ -5,12 +5,16 @@ from app.odoo.crud import OdooCRUD
 OUTPUT_FILE = "app/odoo/registry/odoo_registry.json"
 
 ALLOWED_MODELS = {
+    "ir.model",
     "res.partner",
     "sale.order",
     "sale.order.line",
     "product.template",
+    "product.product",
+    "product.category",
+    "account.payment",
     "account.move",
-    "ir.module.module",
+    "ir.module.module"
 }
 
 
