@@ -10,6 +10,7 @@ from app.exceptions.error_factory import (
     raise_clarification_required,
     raise_validation_error
 )
+import time
 
 class ExecutionContext:
     def __init__(self):
@@ -56,15 +57,16 @@ class WorkflowEngine:
                 validation
             )
 
-        print("validation", validation)
-
         context = ExecutionContext()
         odooService = OdooService(uid=odoo_uid)
         for step in plan["steps"]:
             print("Steps:", step)
-            self._execute_step(step, odooService, context=context)
+            success =self._execute_step(step, odooService, context=context)
+            if not success:
+                break
 
         print("context.execution_log", context.execution_log)
+        time.sleep(45)
         return ResponseAgent().respond(
             user_input=user_input,
             plan=plan,
@@ -78,8 +80,7 @@ class WorkflowEngine:
         self._store_result(step["step_id"], result, context)
         self._log_step(step, result, context)
 
-        if not result.get("success"):
-            raise StopIteration
+        return result.get("success", False)
 
     def _resolve_dependencies(self, step: dict, variables: dict):
         def resolve(value):

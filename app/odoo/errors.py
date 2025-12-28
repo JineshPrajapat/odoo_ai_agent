@@ -1,8 +1,17 @@
 class OdooExecutionError(Exception):
-    def __init__(self, message: str, source="odoo"):
+    def __init__(self, message: str, source="odoo", details: dict | None=None):
         self.message = message
         self.source = source
+        self.details = details
         super().__init__(message)
+
+    def to_dict(self):
+        return {
+            "type": "ODOO_SERVICE_ERROR",
+            "message": self.message,
+            "source": self.source,
+            "details": self.details,
+        }
 
     
     def _handle_odoo_error(self, error: RuntimeError, plan: dict) -> dict:

@@ -8,7 +8,7 @@ class ResponseAgent:
         if clarification:
             return {
                 "success": True,
-                "status": "clarification_required",
+                "state": "clarification_required",
                 "status_code": 200,
                 "message": "Additional information required",
                 "data": {

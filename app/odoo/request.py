@@ -21,7 +21,19 @@ class OdooRequest:
             )
             
         if "error" in response:
-            raise RuntimeError(response["error"])
+            error = response["error"]
+            error_data = error.get("data", {})
+
+            raise OdooExecutionError(
+                message=error_data.get("message", "Odoo execution error"),
+                source="odoo",
+                details={
+                    "name": error_data.get("name"),
+                    "debug": error_data.get("debug"),
+                    "arguments": error_data.get("arguments"),
+                }
+            )
+
         
         return response.get("result")
 

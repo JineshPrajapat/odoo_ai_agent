@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from app.schemas.odoo import OdooExecuteRequest, OdooModuleInstallPayload
 from app.odoo.service import OdooService
 from app.odoo.auth import OdooAuthService
-
+from app.odoo.errors import OdooExecutionError
 router = APIRouter(prefix="/odoo", tags=["Odoo"])
 
 @router.post("/execute")
@@ -20,8 +20,40 @@ def execute_odoo_action(payload: OdooExecuteRequest | OdooModuleInstallPayload):
             "result": result,
         }
 
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+    except OdooExecutionError as e:
+        raise HTTPException(
+            status_code=422,
+            detail={
+                "success": False,
+                "error": e.to_dict(),
+            },
+        )
+
+    except ValueError as e:
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "success": False,
+                "error": {
+                    "type": "VALIDATION_ERROR",
+                    "message": str(e),
+                    "source": "api",
+                },
+            },
+        )
+
+    except Exception:
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "success": False,
+                "error": {
+                    "type": "INTERNAL_ERROR",
+                    "message": "Unexpected server error",
+                    "source": "api",
+                },
+            },
+        )
 
 
 @router.post("/modules/install")

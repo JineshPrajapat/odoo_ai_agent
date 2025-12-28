@@ -41,17 +41,20 @@ class ModelResolverAgent:
 
     def resolve_models(self, user_input: str) -> list[str]:
         mapping = {
-            "customer": "res.partner",
-            "product": "product.template",
-            "product category": "product.category",
-            "invoice": "account.move",
-            "order": "sale.order",
-            "module": "ir.module.module",
-            "sale order line":"sale.order.line",
+            ("sale order line", "sale.order.line"),
+            ("product category", "product.category"),
+            ("product", "product.template"),
+            ("customer", "res.partner"),
+            ("invoice", "account.move"),
+            ("order", "sale.order"),
+            ("module", "ir.module.module"),
         }
 
-        for keyword, model in mapping.items():
-            if keyword in user_input.lower():
-                return [model]
+        user_input = user_input.lower()
+        matched = []
 
-        return []
+        for keyword, model in mapping:
+            if keyword in user_input and model not in matched:
+                matched.append(model)
+
+        return matched
