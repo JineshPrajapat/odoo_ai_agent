@@ -1,0 +1,55 @@
+{
+  "product.template": {
+  "label": "Product",
+  "permissions": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "required_fields_on_create": [
+    "name",
+    "product_variant_ids",
+    "service_tracking",
+    "type",
+    "uom_id"
+  ],
+  "fields": {
+    "name": { "type": "char", "readonly": false },
+    "product_variant_ids": { "type": "one2many", "readonly": false },
+    "type": { "type": "selection", "readonly": false },
+    "service_tracking": { "type": "selection", "readonly": false },
+    "uom_id": { "type": "many2one", "readonly": false },
+    "list_price": { "type": "float", "readonly": false },
+    "standard_price": { "type": "float", "readonly": false },
+    "sale_ok": { "type": "boolean", "readonly": false },
+    "purchase_ok": { "type": "boolean", "readonly": false },
+    "categ_id": { "type": "many2one", "readonly": false },
+    "barcode": { "type": "char", "readonly": false },
+    "company_id": { "type": "many2one", "readonly": false },
+    "description_sale": { "type": "text", "readonly": false },
+    "description_purchase": { "type": "text", "readonly": false },
+    "memo": { "type": "char", "readonly": false },
+    "id": { "type": "integer", "readonly": true },
+    "display_name": { "type": "char", "readonly": true }
+  },
+  "relations": {
+    "product_variant_ids": "product.product",
+    "product_variant_id": "product.product",
+    "categ_id": "product.category",
+    "uom_id": "uom.uom",
+    "company_id": "res.company",
+    "seller_ids": "product.supplierinfo",
+    "taxes_id": "account.tax",
+    "supplier_taxes_id": "account.tax",
+    "product_tag_ids": "product.tag",
+    "optional_product_ids": "product.template",
+    "attribute_line_ids": "product.template.attribute.line",
+    "website_message_ids": "mail.message",
+    "message_ids": "mail.message",
+    "message_partner_ids": "res.partner",
+    "write_uid": "res.users"
+  }
+}
+
+}

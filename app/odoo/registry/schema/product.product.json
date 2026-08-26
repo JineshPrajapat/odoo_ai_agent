@@ -1,0 +1,59 @@
+{
+  "product.product": {
+  "label": "Product Variant",
+  "permissions": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "required_fields_on_create": [
+    "name",
+    "product_tmpl_id",
+    "service_tracking",
+    "type",
+    "uom_id"
+  ],
+  "fields": {
+    "name": { "type": "char", "readonly": false },
+    "product_tmpl_id": { "type": "many2one", "readonly": false },
+    "categ_id": { "type": "many2one", "readonly": false },
+    "barcode": { "type": "char", "readonly": false },
+    "default_code": { "type": "char", "readonly": false },
+    "list_price": { "type": "float", "readonly": false },
+    "standard_price": { "type": "float", "readonly": false },
+    "sale_ok": { "type": "boolean", "readonly": false },
+    "purchase_ok": { "type": "boolean", "readonly": false },
+    "uom_id": { "type": "many2one", "readonly": false },
+    "weight": { "type": "float", "readonly": false },
+    "volume": { "type": "float", "readonly": false },
+    "attribute_line_ids": { "type": "one2many", "readonly": false },
+    "product_tag_ids": { "type": "many2many", "readonly": false },
+    "optional_product_ids": { "type": "many2many", "readonly": false },
+    "seller_ids": { "type": "one2many", "readonly": false },
+    "taxes_id": { "type": "many2many", "readonly": false },
+    "supplier_taxes_id": { "type": "many2many", "readonly": false },
+    "property_account_income_id": { "type": "many2one", "readonly": false },
+    "property_account_expense_id": { "type": "many2one", "readonly": false },
+    "type": { "type": "selection", "readonly": false },
+    "service_tracking": { "type": "selection", "readonly": false },
+    "expense_policy": { "type": "selection", "readonly": false },
+    "invoice_policy": { "type": "selection", "readonly": false },
+    "image_1920": { "type": "binary", "readonly": false },
+    "image_variant_1920": { "type": "binary", "readonly": false }
+  },
+  "relations": {
+    "product_tmpl_id": "product.template",
+    "categ_id": "product.category",
+    "attribute_line_ids": "product.template.attribute.line",
+    "product_tag_ids": "product.tag",
+    "optional_product_ids": "product.template",
+    "seller_ids": "product.supplierinfo",
+    "taxes_id": "account.tax",
+    "supplier_taxes_id": "account.tax",
+    "property_account_income_id": "account.account",
+    "property_account_expense_id": "account.account",
+    "uom_id": "uom.uom"
+  }
+}
+}

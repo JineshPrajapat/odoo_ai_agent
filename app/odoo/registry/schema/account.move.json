@@ -1,0 +1,52 @@
+{
+  "account.move": {
+  "label": "Journal Entry",
+  "permissions": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "required_fields_on_create": [
+    "auto_post",
+    "currency_id",
+    "date",
+    "journal_id"
+  ],
+  "fields": {
+    "name": {
+      "type": "char",
+      "readonly": false
+    },
+    "date": {
+      "type": "date",
+      "readonly": false
+    },
+    "journal_id": {
+      "type": "many2one",
+      "readonly": false
+    },
+    "amount_total": {
+      "type": "monetary",
+      "readonly": true
+    },
+    "partner_id": {
+      "type": "many2one",
+      "readonly": false
+    },
+    "state": {
+      "type": "selection",
+      "readonly": true
+    },
+    "line_ids": {
+      "type": "one2many",
+      "readonly": false
+    }
+  },
+  "relations": {
+    "journal_id": "account.journal",
+    "partner_id": "res.partner",
+    "line_ids": "account.move.line"
+  }
+}
+}

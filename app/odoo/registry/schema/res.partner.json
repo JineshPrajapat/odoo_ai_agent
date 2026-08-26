@@ -1,0 +1,40 @@
+{
+    "res.partner": {
+    "label": "Contact",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": ["name"],
+    "fields": {
+      "name": { "type": "char" },
+      "is_company": { "type": "boolean" },
+      "company_type": { "type": "selection" },
+
+      "email": { "type": "char" },
+      "phone": { "type": "char" },
+      "mobile": { "type": "char" },
+
+      "street": { "type": "char" },
+      "street2": { "type": "char" },
+      "city": { "type": "char" },
+      "zip": { "type": "char" },
+
+      "country_id": { "type": "many2one", "relation": "res.country" },
+      "state_id": { "type": "many2one", "relation": "res.country.state" },
+
+      "vat": { "type": "char" },
+      "industry_id": { "type": "many2one", "relation": "res.partner.industry" },
+
+      "category_id": { "type": "many2many", "relation": "res.partner.category" },
+
+      "company_id": { "type": "many2one", "relation": "res.company" },
+      "user_id": { "type": "many2one", "relation": "res.users" },
+
+      "customer_rank": { "type": "integer" },
+      "supplier_rank": { "type": "integer" }
+    }
+  }
+}

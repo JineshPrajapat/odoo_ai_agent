@@ -1,0 +1,68 @@
+{
+  "sale.order.line": {
+  "label": "Sales Order Line",
+  "permissions": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "required_fields_on_create": [
+    "customer_lead",
+    "name",
+    "order_id",
+    "price_unit",
+    "product_uom_qty"
+  ],
+  "fields": {
+    "customer_lead": { "type": "float", "readonly": false },
+    "name": { "type": "text", "readonly": false },
+    "order_id": { "type": "many2one", "readonly": false },
+    "price_unit": { "type": "float", "readonly": false },
+    "product_uom_qty": { "type": "float", "readonly": false },
+    "analytic_distribution": { "type": "json", "readonly": false },
+    "analytic_line_ids": { "type": "one2many", "readonly": false },
+    "collapse_composition": { "type": "boolean", "readonly": false },
+    "collapse_prices": { "type": "boolean", "readonly": false },
+    "combo_item_id": { "type": "many2one", "readonly": false },
+    "deferred_revenue": { "type": "boolean", "readonly": false },
+    "discount": { "type": "float", "readonly": false },
+    "display_type": { "type": "selection", "readonly": false },
+    "extra_tax_data": { "type": "json", "readonly": false },
+    "invoice_to_be_issued": { "type": "boolean", "readonly": false },
+    "is_downpayment": { "type": "boolean", "readonly": false },
+    "is_expense": { "type": "boolean", "readonly": false },
+    "is_optional": { "type": "boolean", "readonly": false },
+    "linked_line_id": { "type": "many2one", "readonly": false },
+    "linked_line_ids": { "type": "one2many", "readonly": false },
+    "linked_virtual_id": { "type": "char", "readonly": false },
+    "product_custom_attribute_value_ids": { "type": "one2many", "readonly": false },
+    "product_document_ids": { "type": "many2many", "readonly": false },
+    "product_id": { "type": "many2one", "readonly": false },
+    "product_no_variant_attribute_value_ids": { "type": "many2many", "readonly": false },
+    "product_template_id": { "type": "many2one", "readonly": false },
+    "product_uom_id": { "type": "many2one", "readonly": false },
+    "qty_delivered": { "type": "float", "readonly": false },
+    "selected_combo_items": { "type": "char", "readonly": false },
+    "sequence": { "type": "integer", "readonly": false },
+    "tax_ids": { "type": "many2many", "readonly": false },
+    "technical_price_unit": { "type": "float", "readonly": false },
+    "virtual_id": { "type": "char", "readonly": false }
+  },
+  "relations": {
+    "analytic_line_ids": "account.analytic.line",
+    "combo_item_id": "product.combo.item",
+    "linked_line_id": "sale.order.line",
+    "linked_line_ids": "sale.order.line",
+    "order_id": "sale.order",
+    "product_custom_attribute_value_ids": "product.attribute.custom.value",
+    "product_document_ids": "product.document",
+    "product_id": "product.product",
+    "product_no_variant_attribute_value_ids": "product.template.attribute.value",
+    "product_template_id": "product.template",
+    "product_uom_id": "uom.uom",
+    "tax_ids": "account.tax"
+  }
+}
+
+}

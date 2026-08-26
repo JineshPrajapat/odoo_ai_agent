@@ -1,0 +1,4525 @@
+{
+  "res.partner": {
+    "label": "Contact",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "autopost_bills"
+    ],
+    "fields": {
+      "account_move_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "account_represented_company_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "active": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "active_lang_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "activity_exception_decoration": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_exception_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "activity_state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_summary": {
+        "type": "char",
+        "readonly": false
+      },
+      "activity_type_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_type_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "activity_user_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "agent_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "application_statistics": {
+        "type": "json",
+        "readonly": true
+      },
+      "autopost_bills": {
+        "type": "selection",
+        "readonly": false
+      },
+      "available_invoice_template_pdf_report_ids": {
+        "type": "one2many",
+        "readonly": true
+      },
+      "available_peppol_eas": {
+        "type": "json",
+        "readonly": true
+      },
+      "avatar_1024": {
+        "type": "binary",
+        "readonly": true
+      },
+      "avatar_128": {
+        "type": "binary",
+        "readonly": true
+      },
+      "avatar_1920": {
+        "type": "binary",
+        "readonly": true
+      },
+      "avatar_256": {
+        "type": "binary",
+        "readonly": true
+      },
+      "avatar_512": {
+        "type": "binary",
+        "readonly": true
+      },
+      "bank_account_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "bank_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "barcode": {
+        "type": "char",
+        "readonly": false
+      },
+      "category_id": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "channel_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "channel_member_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "child_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "city": {
+        "type": "char",
+        "readonly": false
+      },
+      "color": {
+        "type": "integer",
+        "readonly": false
+      },
+      "comment": {
+        "type": "html",
+        "readonly": false
+      },
+      "commercial_company_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "commercial_partner_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "company_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "company_name": {
+        "type": "char",
+        "readonly": false
+      },
+      "company_registry": {
+        "type": "char",
+        "readonly": false
+      },
+      "company_registry_label": {
+        "type": "char",
+        "readonly": true
+      },
+      "company_registry_placeholder": {
+        "type": "char",
+        "readonly": true
+      },
+      "company_type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "complete_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "contact_address": {
+        "type": "char",
+        "readonly": true
+      },
+      "contact_address_complete": {
+        "type": "char",
+        "readonly": true
+      },
+      "contact_address_inline": {
+        "type": "char",
+        "readonly": true
+      },
+      "contract_ids": {
+        "type": "one2many",
+        "readonly": true
+      },
+      "country_code": {
+        "type": "char",
+        "readonly": true
+      },
+      "country_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "credit": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "credit_limit": {
+        "type": "float",
+        "readonly": false
+      },
+      "credit_to_invoice": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "customer_rank": {
+        "type": "integer",
+        "readonly": false
+      },
+      "days_sales_outstanding": {
+        "type": "float",
+        "readonly": true
+      },
+      "debit": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "display_invoice_edi_format": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "display_invoice_template_pdf_report_id": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "display_pan_warning": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "duplicate_bank_partner_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "email": {
+        "type": "char",
+        "readonly": false
+      },
+      "email_formatted": {
+        "type": "char",
+        "readonly": true
+      },
+      "email_normalized": {
+        "type": "char",
+        "readonly": true
+      },
+      "employee": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "fiscal_country_codes": {
+        "type": "char",
+        "readonly": true
+      },
+      "fiscal_country_group_codes": {
+        "type": "json",
+        "readonly": true
+      },
+      "followup_line_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "followup_next_action_date": {
+        "type": "date",
+        "readonly": false
+      },
+      "followup_reminder_type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "followup_responsible_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "followup_status": {
+        "type": "selection",
+        "readonly": true
+      },
+      "function": {
+        "type": "char",
+        "readonly": false
+      },
+      "has_message": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "has_moves": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "ignore_abnormal_invoice_amount": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "ignore_abnormal_invoice_date": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "im_status": {
+        "type": "char",
+        "readonly": true
+      },
+      "image_1024": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_128": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_1920": {
+        "type": "binary",
+        "readonly": false
+      },
+      "image_256": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_512": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_medium": {
+        "type": "binary",
+        "readonly": true
+      },
+      "industry_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "invoice_edi_format": {
+        "type": "selection",
+        "readonly": false
+      },
+      "invoice_edi_format_store": {
+        "type": "char",
+        "readonly": false
+      },
+      "invoice_ids": {
+        "type": "one2many",
+        "readonly": true
+      },
+      "invoice_sending_method": {
+        "type": "selection",
+        "readonly": false
+      },
+      "invoice_template_pdf_report_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "is_blacklisted": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_company": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_created_by_ocr": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_in_call": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_peppol_edi_format": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_public": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_ubl_format": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_gst_state_warning": {
+        "type": "char",
+        "readonly": true
+      },
+      "l10n_in_gst_treatment": {
+        "type": "selection",
+        "readonly": false
+      },
+      "l10n_in_gstin_status_feature_enabled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_gstin_verified_date": {
+        "type": "date",
+        "readonly": false
+      },
+      "l10n_in_gstin_verified_status": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "l10n_in_is_gst_registered_enabled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_pan_entity_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "l10n_in_tan": {
+        "type": "char",
+        "readonly": false
+      },
+      "lang": {
+        "type": "selection",
+        "readonly": false
+      },
+      "main_user_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "message_attachment_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_bounce": {
+        "type": "integer",
+        "readonly": false
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_has_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_has_error_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_has_sms_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_is_follower": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_partner_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "my_activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "name": {
+        "type": "char",
+        "readonly": false
+      },
+      "ocn_token": {
+        "type": "char",
+        "readonly": true
+      },
+      "offline_since": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "online_partner_information": {
+        "type": "char",
+        "readonly": true
+      },
+      "parent_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "parent_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "partner_company_registry_placeholder": {
+        "type": "char",
+        "readonly": true
+      },
+      "partner_latitude": {
+        "type": "float",
+        "readonly": false
+      },
+      "partner_longitude": {
+        "type": "float",
+        "readonly": false
+      },
+      "partner_share": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "partner_vat_placeholder": {
+        "type": "char",
+        "readonly": true
+      },
+      "payment_token_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "payment_token_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "peppol_eas": {
+        "type": "selection",
+        "readonly": false
+      },
+      "peppol_endpoint": {
+        "type": "char",
+        "readonly": false
+      },
+      "perform_vies_validation": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "phone": {
+        "type": "char",
+        "readonly": false
+      },
+      "phone_blacklisted": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "phone_mobile_search": {
+        "type": "char",
+        "readonly": false
+      },
+      "phone_sanitized": {
+        "type": "char",
+        "readonly": true
+      },
+      "phone_sanitized_blacklisted": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "properties": {
+        "type": "properties",
+        "readonly": false
+      },
+      "properties_base_definition_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "property_account_payable_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_account_position_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_account_receivable_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_inbound_payment_method_line_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_outbound_payment_method_line_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_payment_term_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_product_pricelist": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_supplier_payment_term_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "ref": {
+        "type": "char",
+        "readonly": false
+      },
+      "ref_company_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "rtc_session_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "sale_order_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "sale_order_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "sale_warn_msg": {
+        "type": "text",
+        "readonly": false
+      },
+      "same_company_registry_partner_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "same_vat_partner_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "self": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "show_credit_limit": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "signup_type": {
+        "type": "char",
+        "readonly": false
+      },
+      "specific_property_product_pricelist": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "state_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "street": {
+        "type": "char",
+        "readonly": false
+      },
+      "street2": {
+        "type": "char",
+        "readonly": false
+      },
+      "supplier_invoice_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "supplier_rank": {
+        "type": "integer",
+        "readonly": false
+      },
+      "total_all_due": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "total_all_overdue": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "total_due": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "total_invoiced": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "total_overdue": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "total_overdue_followup": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "trust": {
+        "type": "selection",
+        "readonly": false
+      },
+      "type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "type_address_label": {
+        "type": "char",
+        "readonly": true
+      },
+      "tz": {
+        "type": "selection",
+        "readonly": false
+      },
+      "tz_offset": {
+        "type": "char",
+        "readonly": true
+      },
+      "unpaid_invoice_ids": {
+        "type": "one2many",
+        "readonly": true
+      },
+      "unpaid_invoices_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "unreconciled_aml_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "use_partner_credit_limit": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "user_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "user_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "vat": {
+        "type": "char",
+        "readonly": false
+      },
+      "vat_label": {
+        "type": "char",
+        "readonly": true
+      },
+      "vies_valid": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "website": {
+        "type": "char",
+        "readonly": false
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "zip": {
+        "type": "char",
+        "readonly": false
+      }
+    },
+    "relations": {
+      "account_represented_company_ids": "res.company",
+      "activity_ids": "mail.activity",
+      "activity_type_id": "mail.activity.type",
+      "activity_user_id": "res.users",
+      "agent_ids": "ai.agent",
+      "available_invoice_template_pdf_report_ids": "ir.actions.report",
+      "bank_ids": "res.partner.bank",
+      "category_id": "res.partner.category",
+      "channel_ids": "discuss.channel",
+      "channel_member_ids": "discuss.channel.member",
+      "child_ids": "res.partner",
+      "commercial_partner_id": "res.partner",
+      "company_id": "res.company",
+      "contract_ids": "account.analytic.account",
+      "country_id": "res.country",
+      "create_uid": "res.users",
+      "currency_id": "res.currency",
+      "duplicate_bank_partner_ids": "res.partner",
+      "followup_line_id": "account_followup.followup.line",
+      "followup_responsible_id": "res.users",
+      "industry_id": "res.partner.industry",
+      "invoice_ids": "account.move",
+      "invoice_template_pdf_report_id": "ir.actions.report",
+      "l10n_in_pan_entity_id": "l10n_in.pan.entity",
+      "main_user_id": "res.users",
+      "message_follower_ids": "mail.followers",
+      "message_ids": "mail.message",
+      "message_partner_ids": "res.partner",
+      "parent_id": "res.partner",
+      "payment_token_ids": "payment.token",
+      "properties_base_definition_id": "properties.base.definition",
+      "property_account_payable_id": "account.account",
+      "property_account_position_id": "account.fiscal.position",
+      "property_account_receivable_id": "account.account",
+      "property_inbound_payment_method_line_id": "account.payment.method.line",
+      "property_outbound_payment_method_line_id": "account.payment.method.line",
+      "property_payment_term_id": "account.payment.term",
+      "property_product_pricelist": "product.pricelist",
+      "property_supplier_payment_term_id": "account.payment.term",
+      "ref_company_ids": "res.company",
+      "rtc_session_ids": "discuss.channel.rtc.session",
+      "sale_order_ids": "sale.order",
+      "same_company_registry_partner_id": "res.partner",
+      "same_vat_partner_id": "res.partner",
+      "self": "res.partner",
+      "specific_property_product_pricelist": "product.pricelist",
+      "state_id": "res.country.state",
+      "unpaid_invoice_ids": "account.move",
+      "unreconciled_aml_ids": "account.move.line",
+      "user_id": "res.users",
+      "user_ids": "res.users",
+      "website_message_ids": "mail.message",
+      "write_uid": "res.users"
+    }
+  },
+  "account.move": {
+    "label": "Journal Entry",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "auto_post",
+      "currency_id",
+      "date",
+      "journal_id"
+    ],
+    "fields": {
+      "abnormal_amount_warning": {
+        "type": "text",
+        "readonly": true
+      },
+      "abnormal_date_warning": {
+        "type": "text",
+        "readonly": true
+      },
+      "access_token": {
+        "type": "char",
+        "readonly": false
+      },
+      "access_url": {
+        "type": "char",
+        "readonly": true
+      },
+      "access_warning": {
+        "type": "text",
+        "readonly": true
+      },
+      "account_fiscal_country_group_codes": {
+        "type": "json",
+        "readonly": true
+      },
+      "activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "activity_exception_decoration": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_exception_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "activity_state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_summary": {
+        "type": "char",
+        "readonly": false
+      },
+      "activity_type_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_type_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "activity_user_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "adjusting_entries_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "adjusting_entries_move_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "adjusting_entry_origin_label": {
+        "type": "char",
+        "readonly": true
+      },
+      "adjusting_entry_origin_move_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "adjusting_entry_origin_moves_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "alerts": {
+        "type": "json",
+        "readonly": true
+      },
+      "always_tax_exigible": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "amount_paid": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_residual": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_residual_signed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_tax": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_tax_signed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_total": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_total_in_currency_signed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_total_signed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_total_words": {
+        "type": "char",
+        "readonly": true
+      },
+      "amount_untaxed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_untaxed_in_currency_signed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_untaxed_signed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "attachment_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "audit_trail_message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "authorized_transaction_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "auto_post": {
+        "type": "selection",
+        "readonly": false
+      },
+      "auto_post_origin_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "auto_post_until": {
+        "type": "date",
+        "readonly": false
+      },
+      "bank_partner_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "campaign_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "checked": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "closing_return_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "commercial_partner_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "company_currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "company_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "company_price_include": {
+        "type": "selection",
+        "readonly": true
+      },
+      "country_code": {
+        "type": "char",
+        "readonly": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "currency_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "date": {
+        "type": "date",
+        "readonly": false
+      },
+      "debit_note_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "debit_note_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "debit_origin_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "deferred_entry_type": {
+        "type": "selection",
+        "readonly": true
+      },
+      "deferred_move_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "deferred_original_move_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "delivery_date": {
+        "type": "date",
+        "readonly": false
+      },
+      "direction_sign": {
+        "type": "integer",
+        "readonly": true
+      },
+      "display_inactive_currency_warning": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "display_link_qr_code": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "display_qr_code": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "display_send_button": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "duplicated_ref_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "exchange_diff_partial_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "expected_currency_rate": {
+        "type": "float",
+        "readonly": true
+      },
+      "extract_attachment_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "extract_can_show_banners": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "extract_can_show_send_button": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "extract_detected_layout": {
+        "type": "integer",
+        "readonly": true
+      },
+      "extract_document_uuid": {
+        "type": "char",
+        "readonly": true
+      },
+      "extract_error_message": {
+        "type": "text",
+        "readonly": true
+      },
+      "extract_partner_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "extract_prefill_data": {
+        "type": "json",
+        "readonly": false
+      },
+      "extract_state": {
+        "type": "selection",
+        "readonly": false
+      },
+      "extract_state_processed": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "extract_status": {
+        "type": "char",
+        "readonly": false
+      },
+      "extracted_dates": {
+        "type": "json",
+        "readonly": false
+      },
+      "extracted_numbers": {
+        "type": "json",
+        "readonly": false
+      },
+      "extracted_words": {
+        "type": "json",
+        "readonly": false
+      },
+      "fiscal_position_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "has_message": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "has_reconciled_entries": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "hide_post_button": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "highest_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "highlight_send_button": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "inalterable_hash": {
+        "type": "char",
+        "readonly": true
+      },
+      "incoterm_location": {
+        "type": "char",
+        "readonly": false
+      },
+      "invoice_cash_rounding_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "invoice_currency_rate": {
+        "type": "float",
+        "readonly": false
+      },
+      "invoice_date": {
+        "type": "date",
+        "readonly": false
+      },
+      "invoice_date_due": {
+        "type": "date",
+        "readonly": false
+      },
+      "invoice_filter_type_domain": {
+        "type": "char",
+        "readonly": true
+      },
+      "invoice_has_outstanding": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "invoice_incoterm_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "invoice_incoterm_placeholder": {
+        "type": "char",
+        "readonly": true
+      },
+      "invoice_line_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "invoice_origin": {
+        "type": "char",
+        "readonly": true
+      },
+      "invoice_outstanding_credits_debits_widget": {
+        "type": "binary",
+        "readonly": true
+      },
+      "invoice_partner_display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "invoice_payment_term_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "invoice_payments_widget": {
+        "type": "binary",
+        "readonly": true
+      },
+      "invoice_pdf_report_file": {
+        "type": "binary",
+        "readonly": false
+      },
+      "invoice_pdf_report_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "invoice_source_email": {
+        "type": "char",
+        "readonly": false
+      },
+      "invoice_user_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "invoice_vendor_bill_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "is_being_sent": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_in_extractable_state": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_manually_modified": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_move_sent": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_storno": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "journal_group_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "journal_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "journal_line_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "l10n_in_display_higher_tcs_button": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_gst_treatment": {
+        "type": "selection",
+        "readonly": false
+      },
+      "l10n_in_gstin": {
+        "type": "char",
+        "readonly": false
+      },
+      "l10n_in_gstin_verified_date": {
+        "type": "date",
+        "readonly": true
+      },
+      "l10n_in_is_gst_registered_enabled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_is_withholding": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "l10n_in_journal_type": {
+        "type": "selection",
+        "readonly": true
+      },
+      "l10n_in_partner_gstin_status": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_reseller_partner_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "l10n_in_shipping_bill_date": {
+        "type": "date",
+        "readonly": false
+      },
+      "l10n_in_shipping_bill_number": {
+        "type": "char",
+        "readonly": false
+      },
+      "l10n_in_shipping_port_code_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "l10n_in_show_gstin_status": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_state_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "l10n_in_tcs_feature_enabled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_tds_deduction": {
+        "type": "selection",
+        "readonly": true
+      },
+      "l10n_in_tds_feature_enabled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_total_withholding_amount": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "l10n_in_warning": {
+        "type": "json",
+        "readonly": true
+      },
+      "l10n_in_withhold_move_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "l10n_in_withholding_line_ids": {
+        "type": "one2many",
+        "readonly": true
+      },
+      "l10n_in_withholding_ref_move_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "l10n_in_withholding_ref_payment_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "line_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "made_sequence_gap": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "matched_payment_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "medium_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "message_attachment_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_has_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_has_error_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_has_sms_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_is_follower": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_main_attachment_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "message_needaction": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_partner_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "move_sent_values": {
+        "type": "selection",
+        "readonly": true
+      },
+      "move_type": {
+        "type": "selection",
+        "readonly": true
+      },
+      "my_activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "name": {
+        "type": "char",
+        "readonly": false
+      },
+      "name_placeholder": {
+        "type": "char",
+        "readonly": true
+      },
+      "narration": {
+        "type": "html",
+        "readonly": false
+      },
+      "need_cancel_request": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "needed_terms": {
+        "type": "binary",
+        "readonly": true
+      },
+      "needed_terms_dirty": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "next_payment_date": {
+        "type": "date",
+        "readonly": true
+      },
+      "no_followup": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "origin_payment_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "partner_bank_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "partner_credit_warning": {
+        "type": "text",
+        "readonly": true
+      },
+      "partner_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "partner_shipping_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "payment_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "payment_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "payment_reference": {
+        "type": "char",
+        "readonly": false
+      },
+      "payment_state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "payment_state_before_switch": {
+        "type": "char",
+        "readonly": false
+      },
+      "payment_term_details": {
+        "type": "binary",
+        "readonly": true
+      },
+      "posted_before": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "preferred_payment_method_line_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "qr_code_method": {
+        "type": "selection",
+        "readonly": false
+      },
+      "quick_edit_mode": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "quick_edit_total_amount": {
+        "type": "monetary",
+        "readonly": false
+      },
+      "quick_encoding_vals": {
+        "type": "json",
+        "readonly": true
+      },
+      "reconciled_payment_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "ref": {
+        "type": "char",
+        "readonly": false
+      },
+      "restrict_mode_hash_table": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "reversal_move_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "reversed_entry_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "sale_order_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "sale_warning_text": {
+        "type": "text",
+        "readonly": true
+      },
+      "secure_sequence_number": {
+        "type": "integer",
+        "readonly": true
+      },
+      "secured": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "sending_data": {
+        "type": "json",
+        "readonly": false
+      },
+      "sequence_number": {
+        "type": "integer",
+        "readonly": true
+      },
+      "sequence_prefix": {
+        "type": "char",
+        "readonly": true
+      },
+      "show_delivery_date": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "show_discount_details": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "show_journal": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "show_name_warning": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "show_payment_term_details": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "show_reset_to_draft_button": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "show_signature_area": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "show_taxable_supply_date": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "show_update_fpos": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "signature": {
+        "type": "binary",
+        "readonly": true
+      },
+      "signing_user": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "source_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "statement_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "statement_line_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "statement_line_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "status_in_payment": {
+        "type": "selection",
+        "readonly": true
+      },
+      "suitable_journal_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "tax_calculation_rounding_method": {
+        "type": "selection",
+        "readonly": true
+      },
+      "tax_cash_basis_created_move_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "tax_cash_basis_origin_move_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "tax_cash_basis_rec_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "tax_country_code": {
+        "type": "char",
+        "readonly": true
+      },
+      "tax_country_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "tax_lock_date_message": {
+        "type": "char",
+        "readonly": true
+      },
+      "tax_totals": {
+        "type": "binary",
+        "readonly": false
+      },
+      "taxable_supply_date": {
+        "type": "date",
+        "readonly": false
+      },
+      "taxable_supply_date_placeholder": {
+        "type": "char",
+        "readonly": true
+      },
+      "taxes_legal_notes": {
+        "type": "html",
+        "readonly": true
+      },
+      "team_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "transaction_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "transaction_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "type_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "ubl_cii_xml_file": {
+        "type": "binary",
+        "readonly": false
+      },
+      "ubl_cii_xml_filename": {
+        "type": "char",
+        "readonly": true
+      },
+      "ubl_cii_xml_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "user_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "activity_ids": "mail.activity",
+      "activity_type_id": "mail.activity.type",
+      "activity_user_id": "res.users",
+      "adjusting_entries_move_ids": "account.move",
+      "adjusting_entry_origin_move_ids": "account.move",
+      "attachment_ids": "ir.attachment",
+      "audit_trail_message_ids": "mail.message",
+      "authorized_transaction_ids": "payment.transaction",
+      "auto_post_origin_id": "account.move",
+      "bank_partner_id": "res.partner",
+      "campaign_id": "utm.campaign",
+      "closing_return_id": "account.return",
+      "commercial_partner_id": "res.partner",
+      "company_currency_id": "res.currency",
+      "company_id": "res.company",
+      "create_uid": "res.users",
+      "currency_id": "res.currency",
+      "debit_note_ids": "account.move",
+      "debit_origin_id": "account.move",
+      "deferred_move_ids": "account.move",
+      "deferred_original_move_ids": "account.move",
+      "duplicated_ref_ids": "account.move",
+      "exchange_diff_partial_ids": "account.partial.reconcile",
+      "extract_attachment_id": "ir.attachment",
+      "fiscal_position_id": "account.fiscal.position",
+      "invoice_cash_rounding_id": "account.cash.rounding",
+      "invoice_incoterm_id": "account.incoterms",
+      "invoice_line_ids": "account.move.line",
+      "invoice_payment_term_id": "account.payment.term",
+      "invoice_pdf_report_id": "ir.attachment",
+      "invoice_user_id": "res.users",
+      "invoice_vendor_bill_id": "account.move",
+      "journal_group_id": "account.journal.group",
+      "journal_id": "account.journal",
+      "journal_line_ids": "account.move.line",
+      "l10n_in_reseller_partner_id": "res.partner",
+      "l10n_in_shipping_port_code_id": "l10n_in.port.code",
+      "l10n_in_state_id": "res.country.state",
+      "l10n_in_withhold_move_ids": "account.move",
+      "l10n_in_withholding_line_ids": "account.move.line",
+      "l10n_in_withholding_ref_move_id": "account.move",
+      "l10n_in_withholding_ref_payment_id": "account.payment",
+      "line_ids": "account.move.line",
+      "matched_payment_ids": "account.payment",
+      "medium_id": "utm.medium",
+      "message_follower_ids": "mail.followers",
+      "message_ids": "mail.message",
+      "message_main_attachment_id": "ir.attachment",
+      "message_partner_ids": "res.partner",
+      "origin_payment_id": "account.payment",
+      "partner_bank_id": "res.partner.bank",
+      "partner_id": "res.partner",
+      "partner_shipping_id": "res.partner",
+      "payment_ids": "account.payment",
+      "preferred_payment_method_line_id": "account.payment.method.line",
+      "reconciled_payment_ids": "account.payment",
+      "reversal_move_ids": "account.move",
+      "reversed_entry_id": "account.move",
+      "signing_user": "res.users",
+      "source_id": "utm.source",
+      "statement_id": "account.bank.statement",
+      "statement_line_id": "account.bank.statement.line",
+      "statement_line_ids": "account.bank.statement.line",
+      "suitable_journal_ids": "account.journal",
+      "tax_cash_basis_created_move_ids": "account.move",
+      "tax_cash_basis_origin_move_id": "account.move",
+      "tax_cash_basis_rec_id": "account.partial.reconcile",
+      "tax_country_id": "res.country",
+      "team_id": "crm.team",
+      "transaction_ids": "payment.transaction",
+      "ubl_cii_xml_id": "ir.attachment",
+      "user_id": "res.users",
+      "website_message_ids": "mail.message",
+      "write_uid": "res.users"
+    }
+  },
+  "account.payment": {
+    "label": "Payments",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "company_id",
+      "date",
+      "journal_id",
+      "partner_type",
+      "payment_type",
+      "state"
+    ],
+    "fields": {
+      "activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "activity_exception_decoration": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_exception_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "activity_state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_summary": {
+        "type": "char",
+        "readonly": false
+      },
+      "activity_type_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_type_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "activity_user_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "amount": {
+        "type": "monetary",
+        "readonly": false
+      },
+      "amount_available_for_refund": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_company_currency_signed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_signed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "attachment_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "available_journal_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "available_partner_bank_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "available_payment_method_line_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "company_currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "company_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "country_code": {
+        "type": "char",
+        "readonly": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "currency_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "date": {
+        "type": "date",
+        "readonly": false
+      },
+      "destination_account_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "duplicate_payment_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "has_message": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "invoice_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "is_matched": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_reconciled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_sent": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "journal_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "l10n_in_tds_feature_enabled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_total_withholding_amount": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "l10n_in_withhold_move_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "memo": {
+        "type": "char",
+        "readonly": false
+      },
+      "message_attachment_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_has_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_has_error_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_has_sms_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_is_follower": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_main_attachment_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "message_needaction": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_partner_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "move_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "my_activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "name": {
+        "type": "char",
+        "readonly": true
+      },
+      "need_cancel_request": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "outstanding_account_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "paired_internal_transfer_payment_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "partner_bank_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "partner_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "partner_type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "payment_method_code": {
+        "type": "char",
+        "readonly": true
+      },
+      "payment_method_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "payment_method_line_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "payment_receipt_title": {
+        "type": "char",
+        "readonly": true
+      },
+      "payment_reference": {
+        "type": "char",
+        "readonly": false
+      },
+      "payment_token_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "payment_transaction_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "payment_type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "qr_code": {
+        "type": "html",
+        "readonly": true
+      },
+      "reconciled_bill_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "reconciled_bills_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "reconciled_invoice_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "reconciled_invoices_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "reconciled_invoices_type": {
+        "type": "selection",
+        "readonly": true
+      },
+      "reconciled_statement_line_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "reconciled_statement_lines_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "refunds_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "require_partner_bank_account": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "show_partner_bank_account": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "source_payment_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "state": {
+        "type": "selection",
+        "readonly": false
+      },
+      "suitable_payment_token_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "use_electronic_payment_method": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "activity_ids": "mail.activity",
+      "activity_type_id": "mail.activity.type",
+      "activity_user_id": "res.users",
+      "attachment_ids": "ir.attachment",
+      "available_journal_ids": "account.journal",
+      "available_partner_bank_ids": "res.partner.bank",
+      "available_payment_method_line_ids": "account.payment.method.line",
+      "company_currency_id": "res.currency",
+      "company_id": "res.company",
+      "create_uid": "res.users",
+      "currency_id": "res.currency",
+      "destination_account_id": "account.account",
+      "duplicate_payment_ids": "account.payment",
+      "invoice_ids": "account.move",
+      "journal_id": "account.journal",
+      "l10n_in_withhold_move_ids": "account.move",
+      "message_follower_ids": "mail.followers",
+      "message_ids": "mail.message",
+      "message_main_attachment_id": "ir.attachment",
+      "message_partner_ids": "res.partner",
+      "move_id": "account.move",
+      "outstanding_account_id": "account.account",
+      "paired_internal_transfer_payment_id": "account.payment",
+      "partner_bank_id": "res.partner.bank",
+      "partner_id": "res.partner",
+      "payment_method_id": "account.payment.method",
+      "payment_method_line_id": "account.payment.method.line",
+      "payment_token_id": "payment.token",
+      "payment_transaction_id": "payment.transaction",
+      "reconciled_bill_ids": "account.move",
+      "reconciled_invoice_ids": "account.move",
+      "reconciled_statement_line_ids": "account.bank.statement.line",
+      "source_payment_id": "account.payment",
+      "suitable_payment_token_ids": "payment.token",
+      "website_message_ids": "mail.message",
+      "write_uid": "res.users"
+    }
+  },
+  "product.template": {
+    "label": "Product",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "name",
+      "product_variant_ids",
+      "service_tracking",
+      "type",
+      "uom_id"
+    ],
+    "fields": {
+      "account_tag_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "active": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "activity_exception_decoration": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_exception_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "activity_state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_summary": {
+        "type": "char",
+        "readonly": false
+      },
+      "activity_type_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_type_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "activity_user_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "attribute_line_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "barcode": {
+        "type": "char",
+        "readonly": false
+      },
+      "can_image_1024_be_zoomed": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "categ_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "color": {
+        "type": "integer",
+        "readonly": false
+      },
+      "combo_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "company_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "cost_currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "default_code": {
+        "type": "char",
+        "readonly": false
+      },
+      "description": {
+        "type": "html",
+        "readonly": false
+      },
+      "description_purchase": {
+        "type": "text",
+        "readonly": false
+      },
+      "description_sale": {
+        "type": "text",
+        "readonly": false
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "expense_policy": {
+        "type": "selection",
+        "readonly": false
+      },
+      "fiscal_country_codes": {
+        "type": "char",
+        "readonly": true
+      },
+      "has_configurable_attributes": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "has_message": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "image_1024": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_128": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_1920": {
+        "type": "binary",
+        "readonly": false
+      },
+      "image_256": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_512": {
+        "type": "binary",
+        "readonly": true
+      },
+      "invoice_policy": {
+        "type": "selection",
+        "readonly": false
+      },
+      "is_dynamically_created": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_favorite": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_product_variant": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_hsn_code": {
+        "type": "char",
+        "readonly": false
+      },
+      "l10n_in_hsn_warning": {
+        "type": "text",
+        "readonly": true
+      },
+      "l10n_in_is_gst_registered_enabled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "list_price": {
+        "type": "float",
+        "readonly": false
+      },
+      "message_attachment_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_has_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_has_error_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_has_sms_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_is_follower": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_partner_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "my_activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "name": {
+        "type": "char",
+        "readonly": false
+      },
+      "optional_product_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "pricelist_rule_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "product_document_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "product_document_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "product_properties": {
+        "type": "properties",
+        "readonly": false
+      },
+      "product_tag_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "product_tooltip": {
+        "type": "char",
+        "readonly": true
+      },
+      "product_variant_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "product_variant_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "product_variant_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "property_account_expense_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_account_income_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "purchase_ok": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "sale_line_warn_msg": {
+        "type": "text",
+        "readonly": false
+      },
+      "sale_ok": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "sales_count": {
+        "type": "float",
+        "readonly": true
+      },
+      "seller_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "sequence": {
+        "type": "integer",
+        "readonly": false
+      },
+      "service_tracking": {
+        "type": "selection",
+        "readonly": false
+      },
+      "service_type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "standard_price": {
+        "type": "float",
+        "readonly": false
+      },
+      "supplier_taxes_id": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "tax_string": {
+        "type": "char",
+        "readonly": true
+      },
+      "taxes_id": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "uom_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "uom_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "uom_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "valid_product_template_attribute_line_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "variant_seller_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "visible_expense_policy": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "volume": {
+        "type": "float",
+        "readonly": false
+      },
+      "volume_uom_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "weight": {
+        "type": "float",
+        "readonly": false
+      },
+      "weight_uom_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "account_tag_ids": "account.account.tag",
+      "activity_ids": "mail.activity",
+      "activity_type_id": "mail.activity.type",
+      "activity_user_id": "res.users",
+      "attribute_line_ids": "product.template.attribute.line",
+      "categ_id": "product.category",
+      "combo_ids": "product.combo",
+      "company_id": "res.company",
+      "cost_currency_id": "res.currency",
+      "create_uid": "res.users",
+      "currency_id": "res.currency",
+      "message_follower_ids": "mail.followers",
+      "message_ids": "mail.message",
+      "message_partner_ids": "res.partner",
+      "optional_product_ids": "product.template",
+      "pricelist_rule_ids": "product.pricelist.item",
+      "product_document_ids": "product.document",
+      "product_tag_ids": "product.tag",
+      "product_variant_id": "product.product",
+      "product_variant_ids": "product.product",
+      "property_account_expense_id": "account.account",
+      "property_account_income_id": "account.account",
+      "seller_ids": "product.supplierinfo",
+      "supplier_taxes_id": "account.tax",
+      "taxes_id": "account.tax",
+      "uom_id": "uom.uom",
+      "uom_ids": "uom.uom",
+      "valid_product_template_attribute_line_ids": "product.template.attribute.line",
+      "variant_seller_ids": "product.supplierinfo",
+      "website_message_ids": "mail.message",
+      "write_uid": "res.users"
+    }
+  },
+  "product.category": {
+    "label": "Product Category",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "name"
+    ],
+    "fields": {
+      "child_id": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "complete_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "has_message": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_attachment_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_has_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_has_error_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_has_sms_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_is_follower": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_partner_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "name": {
+        "type": "char",
+        "readonly": false
+      },
+      "parent_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "parent_path": {
+        "type": "char",
+        "readonly": false
+      },
+      "product_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "product_properties_definition": {
+        "type": "properties_definition",
+        "readonly": false
+      },
+      "property_account_expense_categ_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_account_income_categ_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "child_id": "product.category",
+      "create_uid": "res.users",
+      "message_follower_ids": "mail.followers",
+      "message_ids": "mail.message",
+      "message_partner_ids": "res.partner",
+      "parent_id": "product.category",
+      "property_account_expense_categ_id": "account.account",
+      "property_account_income_categ_id": "account.account",
+      "website_message_ids": "mail.message",
+      "write_uid": "res.users"
+    }
+  },
+  "product.product": {
+    "label": "Product Variant",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "name",
+      "product_tmpl_id",
+      "product_variant_ids",
+      "service_tracking",
+      "type",
+      "uom_id"
+    ],
+    "fields": {
+      "account_tag_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "active": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "activity_exception_decoration": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_exception_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "activity_state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_summary": {
+        "type": "char",
+        "readonly": false
+      },
+      "activity_type_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_type_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "activity_user_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "additional_product_tag_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "all_product_tag_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "attribute_line_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "barcode": {
+        "type": "char",
+        "readonly": false
+      },
+      "can_image_1024_be_zoomed": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "can_image_variant_1024_be_zoomed": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "categ_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "code": {
+        "type": "char",
+        "readonly": true
+      },
+      "color": {
+        "type": "integer",
+        "readonly": false
+      },
+      "combination_indices": {
+        "type": "char",
+        "readonly": true
+      },
+      "combo_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "company_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "cost_currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "default_code": {
+        "type": "char",
+        "readonly": false
+      },
+      "description": {
+        "type": "html",
+        "readonly": false
+      },
+      "description_purchase": {
+        "type": "text",
+        "readonly": false
+      },
+      "description_sale": {
+        "type": "text",
+        "readonly": false
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "expense_policy": {
+        "type": "selection",
+        "readonly": false
+      },
+      "fiscal_country_codes": {
+        "type": "char",
+        "readonly": true
+      },
+      "has_configurable_attributes": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "has_message": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "image_1024": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_128": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_1920": {
+        "type": "binary",
+        "readonly": false
+      },
+      "image_256": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_512": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_variant_1024": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_variant_128": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_variant_1920": {
+        "type": "binary",
+        "readonly": false
+      },
+      "image_variant_256": {
+        "type": "binary",
+        "readonly": true
+      },
+      "image_variant_512": {
+        "type": "binary",
+        "readonly": true
+      },
+      "invoice_policy": {
+        "type": "selection",
+        "readonly": false
+      },
+      "is_dynamically_created": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_favorite": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_image_fetch_pending": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_in_selected_section_of_order": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_product_variant": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "l10n_in_hsn_code": {
+        "type": "char",
+        "readonly": false
+      },
+      "l10n_in_hsn_warning": {
+        "type": "text",
+        "readonly": true
+      },
+      "l10n_in_is_gst_registered_enabled": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "list_price": {
+        "type": "float",
+        "readonly": false
+      },
+      "lst_price": {
+        "type": "float",
+        "readonly": false
+      },
+      "message_attachment_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_has_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_has_error_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_has_sms_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_is_follower": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_partner_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "my_activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "name": {
+        "type": "char",
+        "readonly": false
+      },
+      "optional_product_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "partner_ref": {
+        "type": "char",
+        "readonly": true
+      },
+      "price_extra": {
+        "type": "float",
+        "readonly": true
+      },
+      "pricelist_rule_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "product_catalog_product_is_in_sale_order": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "product_document_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "product_document_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "product_properties": {
+        "type": "properties",
+        "readonly": false
+      },
+      "product_tag_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "product_template_attribute_value_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "product_template_variant_value_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "product_tmpl_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "product_tooltip": {
+        "type": "char",
+        "readonly": true
+      },
+      "product_uom_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "product_variant_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "product_variant_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "product_variant_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "property_account_expense_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "property_account_income_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "purchase_ok": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "sale_line_warn_msg": {
+        "type": "text",
+        "readonly": false
+      },
+      "sale_ok": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "sales_count": {
+        "type": "float",
+        "readonly": true
+      },
+      "seller_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "sequence": {
+        "type": "integer",
+        "readonly": false
+      },
+      "service_tracking": {
+        "type": "selection",
+        "readonly": false
+      },
+      "service_type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "standard_price": {
+        "type": "float",
+        "readonly": false
+      },
+      "supplier_taxes_id": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "tax_string": {
+        "type": "char",
+        "readonly": true
+      },
+      "taxes_id": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "uom_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "uom_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "uom_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "valid_product_template_attribute_line_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "variant_seller_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "visible_expense_policy": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "volume": {
+        "type": "float",
+        "readonly": false
+      },
+      "volume_uom_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "weight": {
+        "type": "float",
+        "readonly": false
+      },
+      "weight_uom_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "account_tag_ids": "account.account.tag",
+      "activity_ids": "mail.activity",
+      "activity_type_id": "mail.activity.type",
+      "activity_user_id": "res.users",
+      "additional_product_tag_ids": "product.tag",
+      "all_product_tag_ids": "product.tag",
+      "attribute_line_ids": "product.template.attribute.line",
+      "categ_id": "product.category",
+      "combo_ids": "product.combo",
+      "company_id": "res.company",
+      "cost_currency_id": "res.currency",
+      "create_uid": "res.users",
+      "currency_id": "res.currency",
+      "message_follower_ids": "mail.followers",
+      "message_ids": "mail.message",
+      "message_partner_ids": "res.partner",
+      "optional_product_ids": "product.template",
+      "pricelist_rule_ids": "product.pricelist.item",
+      "product_document_ids": "product.document",
+      "product_tag_ids": "product.tag",
+      "product_template_attribute_value_ids": "product.template.attribute.value",
+      "product_template_variant_value_ids": "product.template.attribute.value",
+      "product_tmpl_id": "product.template",
+      "product_uom_ids": "product.uom",
+      "product_variant_id": "product.product",
+      "product_variant_ids": "product.product",
+      "property_account_expense_id": "account.account",
+      "property_account_income_id": "account.account",
+      "seller_ids": "product.supplierinfo",
+      "supplier_taxes_id": "account.tax",
+      "taxes_id": "account.tax",
+      "uom_id": "uom.uom",
+      "uom_ids": "uom.uom",
+      "valid_product_template_attribute_line_ids": "product.template.attribute.line",
+      "variant_seller_ids": "product.supplierinfo",
+      "website_message_ids": "mail.message",
+      "write_uid": "res.users"
+    }
+  },
+  "sale.order": {
+    "label": "Sales Order",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "company_id",
+      "date_order",
+      "name",
+      "partner_id",
+      "partner_invoice_id",
+      "partner_shipping_id"
+    ],
+    "fields": {
+      "access_token": {
+        "type": "char",
+        "readonly": false
+      },
+      "access_url": {
+        "type": "char",
+        "readonly": true
+      },
+      "access_warning": {
+        "type": "text",
+        "readonly": true
+      },
+      "activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "activity_exception_decoration": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_exception_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "activity_state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "activity_summary": {
+        "type": "char",
+        "readonly": false
+      },
+      "activity_type_icon": {
+        "type": "char",
+        "readonly": true
+      },
+      "activity_type_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "activity_user_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "amount_invoiced": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_paid": {
+        "type": "float",
+        "readonly": true
+      },
+      "amount_tax": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_to_invoice": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_total": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_undiscounted": {
+        "type": "float",
+        "readonly": true
+      },
+      "amount_untaxed": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "authorized_transaction_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "available_quotation_document_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "campaign_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "client_order_ref": {
+        "type": "char",
+        "readonly": false
+      },
+      "commitment_date": {
+        "type": "datetime",
+        "readonly": false
+      },
+      "company_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "company_price_include": {
+        "type": "selection",
+        "readonly": true
+      },
+      "country_code": {
+        "type": "char",
+        "readonly": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "currency_rate": {
+        "type": "float",
+        "readonly": true
+      },
+      "customizable_pdf_form_fields": {
+        "type": "json",
+        "readonly": false
+      },
+      "date_order": {
+        "type": "datetime",
+        "readonly": false
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "duplicated_order_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "expected_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "fiscal_position_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "has_active_pricelist": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "has_archived_products": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "has_authorized_transaction_ids": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "has_message": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "invoice_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "invoice_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "invoice_status": {
+        "type": "selection",
+        "readonly": true
+      },
+      "is_expired": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_pdf_quote_builder_available": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "journal_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "l10n_in_reseller_partner_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "locked": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "medium_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "message_attachment_count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_has_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_has_error_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_has_sms_error": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "message_is_follower": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "message_needaction_counter": {
+        "type": "integer",
+        "readonly": true
+      },
+      "message_partner_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "my_activity_date_deadline": {
+        "type": "date",
+        "readonly": true
+      },
+      "name": {
+        "type": "char",
+        "readonly": false
+      },
+      "note": {
+        "type": "html",
+        "readonly": false
+      },
+      "order_line": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "origin": {
+        "type": "char",
+        "readonly": false
+      },
+      "partner_credit_warning": {
+        "type": "text",
+        "readonly": true
+      },
+      "partner_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "partner_invoice_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "partner_shipping_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "payment_term_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "pending_email_template_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "preferred_payment_method_line_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "prepayment_percent": {
+        "type": "float",
+        "readonly": false
+      },
+      "pricelist_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "quotation_document_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "reference": {
+        "type": "char",
+        "readonly": false
+      },
+      "require_payment": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "require_signature": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "sale_order_template_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "sale_warning_text": {
+        "type": "text",
+        "readonly": true
+      },
+      "show_update_fpos": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "show_update_pricelist": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "signature": {
+        "type": "binary",
+        "readonly": false
+      },
+      "signed_by": {
+        "type": "char",
+        "readonly": false
+      },
+      "signed_on": {
+        "type": "datetime",
+        "readonly": false
+      },
+      "source_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "spreadsheet_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "spreadsheet_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "spreadsheet_template_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "tag_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "tax_calculation_rounding_method": {
+        "type": "selection",
+        "readonly": true
+      },
+      "tax_country_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "tax_totals": {
+        "type": "binary",
+        "readonly": true
+      },
+      "team_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "terms_type": {
+        "type": "selection",
+        "readonly": true
+      },
+      "transaction_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "type_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "user_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "validity_date": {
+        "type": "date",
+        "readonly": false
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "activity_ids": "mail.activity",
+      "activity_type_id": "mail.activity.type",
+      "activity_user_id": "res.users",
+      "authorized_transaction_ids": "payment.transaction",
+      "available_quotation_document_ids": "quotation.document",
+      "campaign_id": "utm.campaign",
+      "company_id": "res.company",
+      "create_uid": "res.users",
+      "currency_id": "res.currency",
+      "duplicated_order_ids": "sale.order",
+      "fiscal_position_id": "account.fiscal.position",
+      "invoice_ids": "account.move",
+      "journal_id": "account.journal",
+      "l10n_in_reseller_partner_id": "res.partner",
+      "medium_id": "utm.medium",
+      "message_follower_ids": "mail.followers",
+      "message_ids": "mail.message",
+      "message_partner_ids": "res.partner",
+      "order_line": "sale.order.line",
+      "partner_id": "res.partner",
+      "partner_invoice_id": "res.partner",
+      "partner_shipping_id": "res.partner",
+      "payment_term_id": "account.payment.term",
+      "pending_email_template_id": "mail.template",
+      "preferred_payment_method_line_id": "account.payment.method.line",
+      "pricelist_id": "product.pricelist",
+      "quotation_document_ids": "quotation.document",
+      "sale_order_template_id": "sale.order.template",
+      "source_id": "utm.source",
+      "spreadsheet_id": "sale.order.spreadsheet",
+      "spreadsheet_ids": "sale.order.spreadsheet",
+      "spreadsheet_template_id": "sale.order.spreadsheet",
+      "tag_ids": "crm.tag",
+      "tax_country_id": "res.country",
+      "team_id": "crm.team",
+      "transaction_ids": "payment.transaction",
+      "user_id": "res.users",
+      "website_message_ids": "mail.message",
+      "write_uid": "res.users"
+    }
+  },
+  "ir.model": {
+    "label": "Models",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "field_id",
+      "model",
+      "name",
+      "order"
+    ],
+    "fields": {
+      "abstract": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "access_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "count": {
+        "type": "integer",
+        "readonly": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "field_id": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "fold_name": {
+        "type": "char",
+        "readonly": false
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "info": {
+        "type": "text",
+        "readonly": false
+      },
+      "inherited_model_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "is_mail_activity": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_mail_blacklist": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_mail_thread": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_mail_thread_sms": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "model": {
+        "type": "char",
+        "readonly": false
+      },
+      "modules": {
+        "type": "char",
+        "readonly": true
+      },
+      "name": {
+        "type": "char",
+        "readonly": false
+      },
+      "order": {
+        "type": "char",
+        "readonly": false
+      },
+      "rule_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "transient": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "view_ids": {
+        "type": "one2many",
+        "readonly": true
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "access_ids": "ir.model.access",
+      "create_uid": "res.users",
+      "field_id": "ir.model.fields",
+      "inherited_model_ids": "ir.model",
+      "rule_ids": "ir.rule",
+      "view_ids": "ir.ui.view",
+      "write_uid": "res.users"
+    }
+  },
+  "ir.module.module": {
+    "label": "Module",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [],
+    "fields": {
+      "account_templates": {
+        "type": "binary",
+        "readonly": true
+      },
+      "application": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "author": {
+        "type": "char",
+        "readonly": true
+      },
+      "auto_install": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "category_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "contributors": {
+        "type": "text",
+        "readonly": true
+      },
+      "country_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "demo": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "dependencies_id": {
+        "type": "one2many",
+        "readonly": true
+      },
+      "description": {
+        "type": "text",
+        "readonly": true
+      },
+      "description_html": {
+        "type": "html",
+        "readonly": true
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "exclusion_ids": {
+        "type": "one2many",
+        "readonly": true
+      },
+      "has_iap": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "icon": {
+        "type": "char",
+        "readonly": false
+      },
+      "icon_flag": {
+        "type": "char",
+        "readonly": true
+      },
+      "icon_image": {
+        "type": "binary",
+        "readonly": true
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "imported": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "installed_version": {
+        "type": "char",
+        "readonly": true
+      },
+      "is_module_official": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "latest_version": {
+        "type": "char",
+        "readonly": true
+      },
+      "license": {
+        "type": "selection",
+        "readonly": true
+      },
+      "maintainer": {
+        "type": "char",
+        "readonly": true
+      },
+      "menus_by_module": {
+        "type": "text",
+        "readonly": true
+      },
+      "module_type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "name": {
+        "type": "char",
+        "readonly": true
+      },
+      "published_version": {
+        "type": "char",
+        "readonly": true
+      },
+      "reports_by_module": {
+        "type": "text",
+        "readonly": true
+      },
+      "sequence": {
+        "type": "integer",
+        "readonly": false
+      },
+      "shortdesc": {
+        "type": "char",
+        "readonly": true
+      },
+      "state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "summary": {
+        "type": "char",
+        "readonly": true
+      },
+      "to_buy": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "url": {
+        "type": "char",
+        "readonly": true
+      },
+      "views_by_module": {
+        "type": "text",
+        "readonly": true
+      },
+      "website": {
+        "type": "char",
+        "readonly": true
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "category_id": "ir.module.category",
+      "country_ids": "res.country",
+      "create_uid": "res.users",
+      "dependencies_id": "ir.module.module.dependency",
+      "exclusion_ids": "ir.module.module.exclusion",
+      "write_uid": "res.users"
+    }
+  },
+  "sale.order.line": {
+    "label": "Sales Order Line",
+    "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "customer_lead",
+      "name",
+      "order_id",
+      "price_unit",
+      "product_uom_qty"
+    ],
+    "fields": {
+      "allowed_uom_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "amount_invoiced": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_to_invoice": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "amount_to_invoice_at_date": {
+        "type": "float",
+        "readonly": true
+      },
+      "analytic_distribution": {
+        "type": "json",
+        "readonly": false
+      },
+      "analytic_line_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "analytic_precision": {
+        "type": "integer",
+        "readonly": false
+      },
+      "available_product_document_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "categ_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "collapse_composition": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "collapse_prices": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "combo_item_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "company_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "company_price_include": {
+        "type": "selection",
+        "readonly": true
+      },
+      "create_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "create_uid": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "currency_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "customer_lead": {
+        "type": "float",
+        "readonly": false
+      },
+      "deferred_revenue": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "discount": {
+        "type": "float",
+        "readonly": false
+      },
+      "display_name": {
+        "type": "char",
+        "readonly": true
+      },
+      "display_type": {
+        "type": "selection",
+        "readonly": false
+      },
+      "distribution_analytic_account_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "extra_tax_data": {
+        "type": "json",
+        "readonly": false
+      },
+      "id": {
+        "type": "integer",
+        "readonly": true
+      },
+      "invoice_lines": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "invoice_status": {
+        "type": "selection",
+        "readonly": true
+      },
+      "invoice_to_be_issued": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_configurable_product": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "is_downpayment": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_expense": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_optional": {
+        "type": "boolean",
+        "readonly": false
+      },
+      "is_product_archived": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "linked_line_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "linked_line_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "linked_virtual_id": {
+        "type": "char",
+        "readonly": false
+      },
+      "name": {
+        "type": "text",
+        "readonly": false
+      },
+      "order_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "order_partner_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "parent_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "price_reduce_taxexcl": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "price_reduce_taxinc": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "price_subtotal": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "price_tax": {
+        "type": "float",
+        "readonly": true
+      },
+      "price_total": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "price_unit": {
+        "type": "float",
+        "readonly": false
+      },
+      "pricelist_item_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "product_custom_attribute_value_ids": {
+        "type": "one2many",
+        "readonly": false
+      },
+      "product_document_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "product_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "product_invoice_policy": {
+        "type": "selection",
+        "readonly": true
+      },
+      "product_no_variant_attribute_value_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "product_template_attribute_value_ids": {
+        "type": "many2many",
+        "readonly": true
+      },
+      "product_template_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "product_type": {
+        "type": "selection",
+        "readonly": true
+      },
+      "product_uom_id": {
+        "type": "many2one",
+        "readonly": false
+      },
+      "product_uom_qty": {
+        "type": "float",
+        "readonly": false
+      },
+      "product_uom_readonly": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "product_updatable": {
+        "type": "boolean",
+        "readonly": true
+      },
+      "qty_delivered": {
+        "type": "float",
+        "readonly": false
+      },
+      "qty_delivered_at_date": {
+        "type": "float",
+        "readonly": true
+      },
+      "qty_delivered_method": {
+        "type": "selection",
+        "readonly": true
+      },
+      "qty_invoiced": {
+        "type": "float",
+        "readonly": true
+      },
+      "qty_invoiced_at_date": {
+        "type": "float",
+        "readonly": true
+      },
+      "qty_invoiced_posted": {
+        "type": "float",
+        "readonly": true
+      },
+      "qty_to_invoice": {
+        "type": "float",
+        "readonly": true
+      },
+      "sale_line_warn_msg": {
+        "type": "text",
+        "readonly": true
+      },
+      "salesman_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "selected_combo_items": {
+        "type": "char",
+        "readonly": false
+      },
+      "sequence": {
+        "type": "integer",
+        "readonly": false
+      },
+      "service_tracking": {
+        "type": "selection",
+        "readonly": true
+      },
+      "state": {
+        "type": "selection",
+        "readonly": true
+      },
+      "tax_calculation_rounding_method": {
+        "type": "selection",
+        "readonly": true
+      },
+      "tax_country_id": {
+        "type": "many2one",
+        "readonly": true
+      },
+      "tax_ids": {
+        "type": "many2many",
+        "readonly": false
+      },
+      "technical_price_unit": {
+        "type": "float",
+        "readonly": false
+      },
+      "translated_product_name": {
+        "type": "text",
+        "readonly": true
+      },
+      "untaxed_amount_invoiced": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "untaxed_amount_to_invoice": {
+        "type": "monetary",
+        "readonly": true
+      },
+      "virtual_id": {
+        "type": "char",
+        "readonly": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "readonly": true
+      },
+      "write_uid": {
+        "type": "many2one",
+        "readonly": true
+      }
+    },
+    "relations": {
+      "allowed_uom_ids": "uom.uom",
+      "analytic_line_ids": "account.analytic.line",
+      "available_product_document_ids": "product.document",
+      "categ_id": "product.category",
+      "combo_item_id": "product.combo.item",
+      "company_id": "res.company",
+      "create_uid": "res.users",
+      "currency_id": "res.currency",
+      "distribution_analytic_account_ids": "account.analytic.account",
+      "invoice_lines": "account.move.line",
+      "linked_line_id": "sale.order.line",
+      "linked_line_ids": "sale.order.line",
+      "order_id": "sale.order",
+      "order_partner_id": "res.partner",
+      "parent_id": "sale.order.line",
+      "pricelist_item_id": "product.pricelist.item",
+      "product_custom_attribute_value_ids": "product.attribute.custom.value",
+      "product_document_ids": "product.document",
+      "product_id": "product.product",
+      "product_no_variant_attribute_value_ids": "product.template.attribute.value",
+      "product_template_attribute_value_ids": "product.template.attribute.value",
+      "product_template_id": "product.template",
+      "product_uom_id": "uom.uom",
+      "salesman_id": "res.users",
+      "tax_country_id": "res.country",
+      "tax_ids": "account.tax",
+      "write_uid": "res.users"
+    }
+  }
+}

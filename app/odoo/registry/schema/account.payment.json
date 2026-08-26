@@ -1,0 +1,48 @@
+{
+  "account.payment": {
+  "label": "Payments",
+  "permissions": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "required_fields_on_create": [
+    "company_id",
+    "date",
+    "journal_id",
+    "partner_type",
+    "payment_type",
+    "state"
+  ],
+  "fields": {
+    "amount": { "type": "monetary", "readonly": false },
+    "date": { "type": "date", "readonly": false },
+    "journal_id": { "type": "many2one", "readonly": false },
+    "partner_id": { "type": "many2one", "readonly": false },
+    "payment_type": { "type": "selection", "readonly": false },
+    "state": { "type": "selection", "readonly": false },
+    "currency_id": { "type": "many2one", "readonly": false },
+    "company_id": { "type": "many2one", "readonly": false },
+    "memo": { "type": "char", "readonly": false },
+    "move_id": { "type": "many2one", "readonly": false },
+    "id": { "type": "integer", "readonly": true },
+    "name": { "type": "char", "readonly": true },
+    "display_name": { "type": "char", "readonly": true }
+  },
+  "relations": {
+    "activity_ids": "mail.activity",
+    "activity_type_id": "mail.activity.type",
+    "activity_user_id": "res.users",
+    "attachment_ids": "ir.attachment",
+    "company_id": "res.company",
+    "currency_id": "res.currency",
+    "journal_id": "account.journal",
+    "partner_id": "res.partner",
+    "move_id": "account.move",
+    "payment_method_id": "account.payment.method",
+    "website_message_ids": "mail.message",
+    "write_uid": "res.users"
+  }
+}
+}

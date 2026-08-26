@@ -1,0 +1,38 @@
+{
+  "ir.model": {
+  "label": "Models",
+  "permissions": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "required_fields_on_create": [
+    "field_id",
+    "model",
+    "name",
+    "order"
+  ],
+  "fields": {
+    "name": { "type": "char", "readonly": false },
+    "model": { "type": "char", "readonly": false },
+    "order": { "type": "char", "readonly": false },
+    "field_id": { "type": "one2many", "readonly": false },
+    "abstract": { "type": "boolean", "readonly": false },
+    "fold_name": { "type": "char", "readonly": false },
+    "info": { "type": "text", "readonly": false },
+    "is_mail_activity": { "type": "boolean", "readonly": false },
+    "is_mail_blacklist": { "type": "boolean", "readonly": false },
+    "is_mail_thread": { "type": "boolean", "readonly": false },
+    "transient": { "type": "boolean", "readonly": false }
+  },
+  "relations": {
+    "field_id": "ir.model.fields",
+    "access_ids": "ir.model.access",
+    "rule_ids": "ir.rule",
+    "inherited_model_ids": "ir.model",
+    "view_ids": "ir.ui.view"
+  }
+}
+
+}

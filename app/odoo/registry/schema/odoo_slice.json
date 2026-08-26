@@ -1,0 +1,13 @@
+{
+  "res.partner": "schema/res.partner.json",
+  "account.move": "schema/account.move.json",
+  "account.payment": "schema/account.payment.json",
+  "sale.order": "schema/sale.order.json",
+  "sale.order.line": "schema/sale.order.line.json",
+  "ir.model": "schema/ir.model.json",
+  "ir.module.module": "schema/ir.module.module.json",
+  "product.category": "schema/product.category.json",
+  "product.product": "schema/product.product.json",
+  "product.template": "schema/product.template.json",
+  "odoo.slice": "schema/odoo_slice.json"
+}

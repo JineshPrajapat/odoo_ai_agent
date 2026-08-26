@@ -1,0 +1,31 @@
+{
+  "product.category": {
+  "label": "Product Category",
+  "permissions": {
+      "read": true,
+      "create": true,
+      "update": true,
+      "delete": true
+    },
+    "required_fields_on_create": [
+      "name"
+    ],
+    "fields": {
+      "name": { "type": "char", "readonly": false },
+      "parent_id": { "type": "many2one", "readonly": false },
+      "child_id": { "type": "one2many", "readonly": false },
+      "parent_path": { "type": "char", "readonly": false },
+      "property_account_income_categ_id": { "type": "many2one", "readonly": false },
+      "property_account_expense_categ_id": { "type": "many2one", "readonly": false },
+      "product_properties_definition": { "type": "properties_definition", "readonly": false },
+      "display_name": { "type": "char", "readonly": true },
+      "id": { "type": "integer", "readonly": true }
+    },
+    "relations": {
+      "child_id": "product.category",
+      "parent_id": "product.category",
+      "property_account_income_categ_id": "account.account",
+      "property_account_expense_categ_id": "account.account"
+    }
+  }
+}

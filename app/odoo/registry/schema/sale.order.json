@@ -1,0 +1,72 @@
+{
+  "sale.order": {
+  "label": "Sales Order",
+  "permissions": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "required_fields_on_create": [
+    "company_id",
+    "date_order",
+    "name",
+    "partner_id",
+    "partner_invoice_id",
+    "partner_shipping_id"
+  ],
+  "fields": {
+    "name": { "type": "char", "readonly": false },
+    "company_id": { "type": "many2one", "readonly": false },
+    "date_order": { "type": "datetime", "readonly": false },
+    "partner_id": { "type": "many2one", "readonly": false },
+    "partner_invoice_id": { "type": "many2one", "readonly": false },
+    "partner_shipping_id": { "type": "many2one", "readonly": false },
+    "pricelist_id": { "type": "many2one", "readonly": false },
+    "payment_term_id": { "type": "many2one", "readonly": false },
+    "journal_id": { "type": "many2one", "readonly": false },
+    "fiscal_position_id": { "type": "many2one", "readonly": false },
+    "team_id": { "type": "many2one", "readonly": false },
+    "user_id": { "type": "many2one", "readonly": false },
+    "order_line": { "type": "one2many", "readonly": false },
+    "note": { "type": "html", "readonly": false },
+    "client_order_ref": { "type": "char", "readonly": false },
+    "origin": { "type": "char", "readonly": false },
+    "commitment_date": { "type": "datetime", "readonly": false },
+    "validity_date": { "type": "date", "readonly": false },
+    "source_id": { "type": "many2one", "readonly": false },
+    "medium_id": { "type": "many2one", "readonly": false },
+    "campaign_id": { "type": "many2one", "readonly": false },
+    "prepayment_percent": { "type": "float", "readonly": false },
+    "require_payment": { "type": "boolean", "readonly": false },
+    "require_signature": { "type": "boolean", "readonly": false },
+    "signature": { "type": "binary", "readonly": false },
+    "signed_by": { "type": "char", "readonly": false },
+    "signed_on": { "type": "datetime", "readonly": false },
+    "sale_order_template_id": { "type": "many2one", "readonly": false },
+    "show_update_pricelist": { "type": "boolean", "readonly": false },
+    "show_update_fpos": { "type": "boolean", "readonly": false },
+    "tag_ids": { "type": "many2many", "readonly": false },
+    "customizable_pdf_form_fields": { "type": "json", "readonly": false }
+  },
+  "relations": {
+    "company_id": "res.company",
+    "partner_id": "res.partner",
+    "partner_invoice_id": "res.partner",
+    "partner_shipping_id": "res.partner",
+    "pricelist_id": "product.pricelist",
+    "payment_term_id": "account.payment.term",
+    "journal_id": "account.journal",
+    "fiscal_position_id": "account.fiscal.position",
+    "team_id": "crm.team",
+    "user_id": "res.users",
+    "order_line": "sale.order.line",
+    "source_id": "utm.source",
+    "medium_id": "utm.medium",
+    "campaign_id": "utm.campaign",
+    "sale_order_template_id": "sale.order.template",
+    "tag_ids": "crm.tag"
+  }
+}
+
+}

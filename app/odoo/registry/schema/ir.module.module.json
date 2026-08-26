@@ -1,0 +1,28 @@
+{
+  "ir.module.module": {
+  "label": "Module",
+  "permissions": {
+    "read": true,
+    "create": true,
+    "update": true,
+    "delete": true
+  },
+  "required_fields_on_create": [],
+  "fields": {
+    "auto_install": { "type": "boolean", "readonly": false },
+    "country_ids": { "type": "many2many", "readonly": false },
+    "icon": { "type": "char", "readonly": false },
+    "imported": { "type": "boolean", "readonly": false },
+    "module_type": { "type": "selection", "readonly": false },
+    "sequence": { "type": "integer", "readonly": false },
+    "to_buy": { "type": "boolean", "readonly": false }
+  },
+  "relations": {
+    "category_id": "ir.module.category",
+    "country_ids": "res.country",
+    "dependencies_id": "ir.module.module.dependency",
+    "exclusion_ids": "ir.module.module.exclusion"
+  }
+}
+
+}
